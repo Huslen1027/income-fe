@@ -2,3 +2,8 @@ export * from "./Vector";
 export * from "./Leading";
 export * from "./Doth";
 export * from "./Arrow";
+export * from "./Pinkdoth";
+export * from "./blueDoth";
+export * from "./Orangedoth";
+export * from "./Greendoth";
+export * from "./Clothes";

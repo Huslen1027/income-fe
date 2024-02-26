@@ -3,9 +3,10 @@ import Sign from "@/components/Sign";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-w-[1420px] m-auto">
       <Header />
       <Sign />
+   
     </div>
   );
 }

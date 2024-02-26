@@ -10,7 +10,6 @@ const Piechart = () => {
     script.onload = () => {
       const ctx = document.getElementById("piechart");
       const data = {
-        labels: ["Red", "Blue", "Yellow", "helloboys"],
         datasets: [
           {
             label: "My First Dataset",
@@ -25,6 +24,10 @@ const Piechart = () => {
           },
         ],
       };
+      new Chart(ctx, {
+        type: "doughnut",
+        data: data,
+      });
     };
 
     return () => {
