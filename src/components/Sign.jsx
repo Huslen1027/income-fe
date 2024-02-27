@@ -1,6 +1,6 @@
 import TotalE from "./TotalE";
 import IncomeY from "./IncomeY";
-import IncomeExpense from "./IncomeExpense";
+import IncomeExpense from "./Donut";
 import Total from "./Total";
 import IncomeExpense1 from "./IncomeExpense1";
 import LastRecords from "./LastRecords";

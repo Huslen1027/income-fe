@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Vector from "./icons/Vector";
 import Leading from "./icons/Leading";
+import Link from "next/link";
 export default function Header() {
   const router = useRouter();
   return (
@@ -9,10 +10,14 @@ export default function Header() {
         <div class="navbar ">
           <div class="flex-none">
             <Vector />
-            <p class="btn btn-ghost text-base ">Dashboard</p>
+            <Link href="/">
+              <p class="btn btn-ghost text-base ">Dashboard</p>
+            </Link>
           </div>
           <div class="flex-1">
-            <p class="btn btn-ghost text-base">Record</p>
+            <Link href="/record">
+              <p class="btn btn-ghost text-base">Record</p>
+            </Link>
           </div>
         </div>
       </div>
