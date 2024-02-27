@@ -3,7 +3,7 @@ import Arrow from "./icons/Arrow";
 export default function TotalE() {
   return (
     <div className="flex w-[384px] flex-col items-start justify-center rounded-xl bg-[#FFFFFF] h-[208px] mt-10  ">
-      <div className="flex items-center gap-2 p-4 h-[56px] border-b">
+      <div className="flex items-center gap-2 p-4 h-[56px]  w-[384px] border-b">
         <Doth />
         <p className="text-[#0F172A]  text-[16px] ">Total Expenses</p>
       </div>

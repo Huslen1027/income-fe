@@ -3,7 +3,7 @@ import Arrow from "./icons/Arrow";
 export default function IncomeY() {
   return (
     <div className="flex w-[384px] flex-col items-start justify-center rounded-xl bg-[#FFF] h-[208px] mt-10">
-      <div className="flex items-center gap-2 p-4 border-b">
+      <div className="flex items-center gap-2 p-4 border-b  w-[384px] ">
         <Doth />
         <p className="text-[#0F172A]  text-[16px] ">Your Income</p>
       </div>

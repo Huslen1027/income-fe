@@ -6,7 +6,6 @@ export default function Home() {
     <div className="max-w-[1420px] m-auto">
       <Header />
       <Sign />
-   
     </div>
   );
 }
