@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function CreateAcc() {
   return (
     <div
-      className="flex w-full
-     h-[1050px] relative"
+      className="flex w-[1240px]
+     h-full relative"
     >
       <div
-        className="w-[50%]
+        className="w-[1240px]
        h-[1050px] left-[1032px] absolute bg-blue-600"
       ></div>
       <div className="left-[112px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex w-[50%] h-full">

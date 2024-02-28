@@ -1,7 +1,9 @@
 import Leading from "./icons/Leading";
+import { Category } from "@/pages/utils/category";
+import BluePlus from "./icons/BLueplus";
 export default function Records() {
   return (
-    <div className="w-[1440px] h-[1208px] bg-[#F3F4F6]">
+    <div className="w-[1440px] h-[1208px] bg-[#F3F4F6] px-[120px]">
       <div className=" w-[250px] h-[1032px] inline-flex py-6 px-4 flex-col items-start gap-6 rounded-[12px] border border-[#E5E7EB] bg-[#F9FAFB]">
         <div className="flex flex-col items-start gap-6  ">
           <h1 className="text-[24px] text-[#000]">Records</h1>
@@ -59,9 +61,52 @@ export default function Records() {
               Clear
             </button>
           </div>
-          <div className="flex flex-col items-start gap-2 h-[472px] w-[210px]"></div>
+          <div className="flex flex-col items-start gap-4 h-[472px] w-[210px]">
+            {Category.map((e) => {
+              return (
+                <button className="flex gap-2 justify-center text-[15px] text-[#1F2937] items-center">
+                  {e.icon} {e.name}
+                  <div className="flex justify-end items-end">
+                    {" "}
+                    {e.Leadingicon}
+                  </div>
+                </button>
+              );
+            })}
+            <div className="flex justify-between items-center ">
+              <button className="flex h-[32px] py-3 justify-center items-center gap-2 rounded-[8px] ">
+                <BluePlus />
+                <p className="text-[16px] text-[#1F2937]">Add Category</p>
+              </button>
+            </div>
+          </div>
+          <div className="flex flex-col items-start gap-4">
+            <h1 className="text-[16px] text-[#1F2937]">Amount Range</h1>
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex gap-4 items-start">
+                <input
+                  type="text"
+                  placeholder="Type here"
+                  className="input input-bordered w-full max-w-xs"
+                />
+                <input
+                  type="text"
+                  placeholder="Type here"
+                  className="input input-bordered w-full max-w-xs"
+                />
+              </div>
+              <div className="w-[220px] h-[48px]">
+                <input
+                  type="range"
+                  min={0}
+                  max="100"
+                  value="40"
+                  className="range range-primary"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div></div>
       </div>
     </div>
   );
