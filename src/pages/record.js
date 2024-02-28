@@ -1,3 +1,8 @@
+import Records from "@/components/Records";
 export default function Record() {
-  return <div>aa</div>;
+  return (
+    <div className=" max-w-[1420px] m-auto ">
+      <Records />
+    </div>
+  );
 }

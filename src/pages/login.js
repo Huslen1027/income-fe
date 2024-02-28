@@ -5,11 +5,11 @@ export default function Login() {
   return (
     <div
       className="w-full
-     h-[950px] relative bg-white"
+     h-[1050px] relative "
     >
       <div
         className="w-full
-       h-[950px] left-[1032px] absolute bg-blue-600"
+       h-[1050px] left-[1032px] absolute bg-blue-600"
       ></div>
 
       <div className="left-[422px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex">

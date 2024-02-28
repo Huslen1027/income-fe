@@ -24,9 +24,9 @@ export default function SignUp1() {
             <h1 className="text-[24px] text-[#0F172A]">Select base currency</h1>
             <select className="select select-bordered select-lg w-[384px]  bg-gray-100 border border-black ">
               <option>MNT-Mongolian Tugrik</option>
-              <option>Large Apple</option>
-              <option>Large Orange</option>
-              <option>Large Tomato</option>
+              <option>UKT-Ukraine UAH</option>
+              <option>KR-Korea KRW</option>
+              <option>JP-Japanese YEN</option>
             </select>
           </div>
           <p className="text-[12px] text-[#475569]">
