@@ -13,9 +13,9 @@ export default function Donut() {
             <Piechart />
           </div>
           <div>
-            {DonutData.map((e) => {
+            {DonutData.map((e, index) => {
               return (
-                <div className="flex flex-col items-start ">
+                <div key={index} className="flex flex-col items-start ">
                   <div className="flex items-center gap-8 mt-3">
                     <div className="flex items-center gap-2 w-[103px]">
                       {e.color}

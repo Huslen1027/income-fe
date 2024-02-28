@@ -5,9 +5,9 @@ export default function LastRecords() {
       <div className="flex items-center  gap-2 p-4 border-b w-[1180px]">
         <p className="text-[16px] text-[#0f172a]">Last Records</p>
       </div>
-      {LastRecord.map((e) => {
+      {LastRecord.map((e, index) => {
         return (
-          <div className="flex flex-col items-start ">
+          <div key={index} className="flex flex-col items-start ">
             <div className="flex p-5 justify-between items-center border-b w-[1180px]  bg-[#FFF]">
               <div className="flex items-center gap-4">
                 <div className="w-[40px] h-[40px] rounded-full  bg-[#0166FF] flex justify-center items-center">

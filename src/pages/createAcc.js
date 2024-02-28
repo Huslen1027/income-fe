@@ -5,13 +5,13 @@ export default function CreateAcc() {
   return (
     <div
       className="flex w-[1240px]
-     h-full relative"
+     h-[1100px] relative"
     >
       <div
         className="w-[1240px]
-       h-[1050px] left-[1032px] absolute bg-blue-600"
+       h-[1200px] left-[1032px] absolute bg-blue-600"
       ></div>
-      <div className="left-[112px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex w-[50%] h-full">
+      <div className="left-[312px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex w-[50%] h-full">
         <div className="flex justify-center items-center gap-4">
           <Vector />
           <Geld />

@@ -5,11 +5,11 @@ export default function Login() {
   return (
     <div
       className="w-full
-     h-[1050px] relative "
+     h-[1100px] relative "
     >
       <div
         className="w-full
-       h-[1050px] left-[1032px] absolute bg-blue-600"
+       h-[1200px] left-[1032px] absolute bg-blue-600"
       ></div>
 
       <div className="left-[422px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex">
@@ -49,9 +49,11 @@ export default function Login() {
             Don’t have account?
           </div>
           <div className="w-[80px] px-3 rounded-[20px] justify-center items-center gap-1 flex">
-            <button className="text-blue-600 text-base font-normal leading-normal">
-              Sign up
-            </button>
+            <Link href="/signUp1">
+              <button className="text-blue-600 text-base font-normal leading-normal">
+                Sign up
+              </button>
+            </Link>
           </div>
         </div>
       </div>
