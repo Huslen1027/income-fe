@@ -4,7 +4,7 @@ import BluePlus from "./icons/BLueplus";
 import { EndRecord } from "@/pages/utils/endRecord";
 export default function Records() {
   return (
-    <div className="w-[1420px] h-[1208px] bg-[#F3F4F6] px-[120px] flex items-start gap-6">
+    <div className="w-[1440px] h-[1208px] bg-[#F3F4F6] px-[120px] flex items-start gap-6">
       <div className=" w-[250px] h-[1032px] inline-flex py-6 px-4 flex-col items-start gap-6 rounded-[12px] border border-[#E5E7EB] bg-[#F9FAFB] mt-5">
         <div className="flex flex-col items-start gap-6  ">
           <h1 className="text-[24px] text-[#000]">Records</h1>

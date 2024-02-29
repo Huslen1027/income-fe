@@ -7,7 +7,7 @@ import { ExpenseModal } from "./ExpenseModal";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className=" max-w-[1420px] m-auto flex justify-between items-center  bg-[#fff] px-[120px] py-4 ">
+    <div className=" max-w-[1440px] m-auto flex justify-between items-center  bg-[#fff] px-[120px] py-4 ">
       <div>
         <div class="navbar ">
           <div class="flex-none">

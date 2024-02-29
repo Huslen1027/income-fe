@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function Login() {
   return (
     <div
-      className="w-full
+      className="
      h-[1100px] relative "
     >
       <div
-        className="w-full
-       h-[1200px] left-[1032px] absolute bg-blue-600"
+        className="w-[1200px]
+       h-[1100px] left-[1032px] absolute bg-blue-600"
       ></div>
 
       <div className="left-[422px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex">

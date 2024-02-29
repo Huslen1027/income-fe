@@ -2,7 +2,7 @@ import Records from "@/components/Records";
 import Layout from "@/components/layout";
 export default function Record() {
   return (
-    <div className=" max-w-[1420px] m-auto ">
+    <div className=" max-w-[1440px] m-auto ">
       <Records />
     </div>
   );

@@ -1,6 +1,6 @@
 export function ExpenseModal() {
   return (
-    <div className="w-[792px] h-content mx-auto rounded-[20px]">
+    <div className="w-[792px] h-content mx-auto relative bottom-[150px]">
       <div className="w-[792px] h-[68px] px-6 py-5 bg-white border-b border-slate-200 justify-between items-center inline-flex rounded-[20px_20px_0_0]">
         <div className="text-slate-900 text-xl font-semibold font-sans leading-7">
           Add Record
@@ -47,6 +47,7 @@ export function ExpenseModal() {
                 <option>Greedo</option>
               </select>
             </div>
+
             <div className="self-stretch justify-start items-start gap-3 inline-flex">
               <div className="grow shrink basis-0 rounded-lg flex-col justify-center items-start inline-flex gap-2">
                 <div className="h-[18px] justify-start items-center inline-flex">
@@ -54,12 +55,13 @@ export function ExpenseModal() {
                     Date
                   </div>
                 </div>
-                <div className="self-stretch h-12 p-4 bg-gray-50 rounded-lg border border-gray-300 justify-start items-center inline-flex">
-                  <div className="grow shrink basis-0 text-slate-900 text-base font-normal font-sans leading-normal">
+                <select className="select  w-full max-w-xs bg-[#F9FAFB] border border-gray-300">
+                  <option disabled selected>
                     Oct 30, 2023
-                  </div>
-                  <div className="w-6 h-6 relative" />
-                </div>
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
               </div>
               <div className="grow shrink basis-0 rounded-lg flex-col justify-center items-start inline-flex gap-2">
                 <div className="h-[18px] justify-start items-center inline-flex">
@@ -67,12 +69,13 @@ export function ExpenseModal() {
                     Date
                   </div>
                 </div>
-                <div className="self-stretch h-12 p-4 bg-gray-50 rounded-lg border border-gray-300 justify-start items-center inline-flex">
-                  <div className="grow shrink basis-0 text-slate-900 text-base font-normal font-sans leading-normal">
+                <select className="select  w-full max-w-xs bg-[#F9FAFB] border border-gray-300">
+                  <option disabled selected>
                     4:15 PM
-                  </div>
-                  <div className="w-6 h-6 relative" />
-                </div>
+                  </option>
+                  <option>Han Solo</option>
+                  <option>Greedo</option>
+                </select>
               </div>
             </div>
           </div>

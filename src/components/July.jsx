@@ -28,27 +28,28 @@ const July = () => {
         labels: labels,
         datasets: [
           {
-            label: "My First Dataset",
-            data: [65, 59, 80, 81, 56, 55, 40],
-            backgroundColor: [
-              "rgba(255, 99, 132, 0.2)",
-              "rgba(255, 159, 64, 0.2)",
-              "rgba(255, 205, 86, 0.2)",
-              "rgba(75, 192, 192, 0.2)",
-              "rgba(54, 162, 235, 0.2)",
-              "rgba(153, 102, 255, 0.2)",
-              "rgba(201, 203, 207, 0.2)",
+            label: "Income",
+            backgroundColor: "#84CC16",
+            borderColor: "rgba(255,99,132,1)",
+            barThickness: 15,
+            borderRadius: 20,
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: [
+              3000000, 2200000, 2440000, 1040000, 1500000, 1850000, 2800000,
             ],
-            borderColor: [
-              "rgb(255, 99, 132)",
-              "rgb(255, 159, 64)",
-              "rgb(255, 205, 86)",
-              "rgb(75, 192, 192)",
-              "rgb(54, 162, 235)",
-              "rgb(153, 102, 255)",
-              "rgb(201, 203, 207)",
+          },
+          {
+            label: "Expense",
+            backgroundColor: "#F97316",
+            borderColor: "rgba(255,99,132,1)",
+            borderRadius: 20,
+            barThickness: 15,
+            hoverBackgroundColor: "rgba(255,99,132,0.4)",
+            hoverBorderColor: "rgba(255,99,132,1)",
+            data: [
+              2300000, 2100000, 2140000, 940000, 1000000, 1150000, 1800000,
             ],
-            borderWidth: 1,
           },
         ],
       };
