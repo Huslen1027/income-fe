@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function StepThree() {
   return (
     <div className="flex  py-10 flex-col items-center gap-[141px] bg-[#FFF] h-[1000px] ">
-      <div className="flex flex-col items-center gap-20">
+      <div className="flex flex-col items-center gap-10">
         <div className="flex p-[6px] items-center gap-[11px] justify-center">
           <Vector />
           <Geld />
@@ -34,13 +34,13 @@ export default function StepThree() {
             </div>
             <h1 className="text-[24px] text-[#0F172A]">Good Job!</h1>
           </div>
-          <p className="text-[12px] text-[#475569]">
+          <p className="text-[12px] text-[#475569] ">
             Your very first account has been created. Now continue to dashboard
             and start tracking
           </p>
         </div>
         <Link href="/dashboard">
-          <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
+          <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF] mt-[40px]">
             <p className="text-[#FFFFFF] text-[20px]">Go To Dashboard</p>
           </button>
         </Link>

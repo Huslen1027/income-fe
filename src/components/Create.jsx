@@ -1,7 +1,7 @@
-import Vector from "@/components/icons/Vector";
-import Geld from "@/components/icons/Geld";
+import Vector from "./icons/Vector";
+import Geld from "./icons/Geld";
 import Link from "next/link";
-export default function CreateAcc() {
+export default function Create({ setShowLoad }) {
   return (
     <div
       className="flex w-[1240px]
@@ -41,13 +41,17 @@ export default function CreateAcc() {
             className="w-96 h-12 px-4 bg-gray-100 text-black  rounded-lg border border-gray-300 justify-start items-center inline-flex"
             placeholder=" Re-password"
           />
-          <Link href="/login">
-            <div className="w-96 h-12 px-4 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex">
-              <button className="text-white text-xl font-normal   leading-7">
-                Log in
-              </button>
-            </div>
-          </Link>
+
+          <div className="w-96 h-12 px-4 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex">
+            <button
+              onClick={() => {
+                setShowLoad("stepOne");
+              }}
+              className="text-white text-xl font-normal   leading-7"
+            >
+              Sign up
+            </button>
+          </div>
         </div>
 
         <div className="justify-start items-baseline inline-flex">

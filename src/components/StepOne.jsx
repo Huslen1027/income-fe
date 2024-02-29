@@ -5,12 +5,12 @@ import Link from "next/link";
 export default function StepOne() {
   return (
     <div className="flex  py-10 flex-col items-center gap-[151px] bg-[#FFF] h-[1000px] ">
-      <div className="flex flex-col items-center gap-1">
+      <div className="flex flex-col items-center gap-4">
         <div className="flex p-[6px] items-center gap-[11px] justify-center">
           <Vector />
           <Geld />
         </div>
-        <ul className="steps bg-[white] gap-4">
+        <ul className="steps bg-[white] gap-4 mt-[45px]">
           <li className="step step-accent ">Currency</li>
           <li className="step ">Balance</li>
           <li className="step">Finish</li>
@@ -35,7 +35,7 @@ export default function StepOne() {
             transaction in other currencies will be calculated based on this one{" "}
           </p>
         </div>
-        <Link href="/signupTwo">
+        <Link href="/StepTwo">
           {" "}
           <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
             <p className="text-[#FFFFFF] text-[20px]">Confirm</p>

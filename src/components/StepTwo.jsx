@@ -9,7 +9,7 @@ export default function StepTwo() {
           <Vector />
           <Geld />
         </div>
-        <ul className="steps bg-[white] gap-4">
+        <ul className="steps bg-[white] gap-4 mt-[21px] mb-[35px]">
           <li className="step step-accent ">Currency</li>
           <li className="step step-accent ">Balance</li>
           <li className="step">Finish</li>
@@ -44,7 +44,7 @@ export default function StepTwo() {
             How much cash do you have in your wallet?
           </p>
         </div>
-        <Link href="/signupThree">
+        <Link href="/StepThree">
           <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
             <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
           </button>
