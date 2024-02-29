@@ -1,16 +1,17 @@
 import Geld from "@/components/icons/Geld";
 import Vector from "@/components/icons/Vector";
 import Dollar from "@/components/icons/Dollar";
-export default function SignUp1() {
+import Link from "next/link";
+export default function StepOne() {
   return (
-    <div className="flex  py-10 flex-col items-center gap-[141px] bg-[#FFF] h-[1000px] ">
-      <div className="flex flex-col items-center gap-10">
+    <div className="flex  py-10 flex-col items-center gap-[151px] bg-[#FFF] h-[1000px] ">
+      <div className="flex flex-col items-center gap-1">
         <div className="flex p-[6px] items-center gap-[11px] justify-center">
           <Vector />
           <Geld />
         </div>
-        <ul className="steps bg-[white]">
-          <li className="step step-primary ">Currency</li>
+        <ul className="steps bg-[white] gap-4">
+          <li className="step step-accent ">Currency</li>
           <li className="step ">Balance</li>
           <li className="step">Finish</li>
         </ul>
@@ -22,7 +23,7 @@ export default function SignUp1() {
               <Dollar />
             </div>
             <h1 className="text-[24px] text-[#0F172A]">Select base currency</h1>
-            <select className="select select-bordered select-lg w-[384px]  bg-gray-100 border border-black ">
+            <select className="select select-bordered select-lg w-[384px]  bg-gray-100 border  ">
               <option>MNT-Mongolian Tugrik</option>
               <option>UKT-Ukraine UAH</option>
               <option>KR-Korea KRW</option>
@@ -34,9 +35,12 @@ export default function SignUp1() {
             transaction in other currencies will be calculated based on this one{" "}
           </p>
         </div>
-        <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
-          <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
-        </button>
+        <Link href="/signupTwo">
+          {" "}
+          <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
+            <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
+          </button>
+        </Link>
       </div>
     </div>
   );

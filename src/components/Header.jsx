@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import Vector from "./icons/Vector";
 import Leading from "./icons/Leading";
 import Link from "next/link";
-import { ExpenseModal } from "./ExpenseModa";
+import { ExpenseModal } from "./ExpenseModal";
 
 export default function Header() {
   const router = useRouter();
@@ -12,7 +12,7 @@ export default function Header() {
         <div class="navbar ">
           <div class="flex-none">
             <Vector />
-            <Link href="/">
+            <Link href="/dashboard">
               <p class="btn btn-ghost text-base ">Dashboard</p>
             </Link>
           </div>

@@ -108,7 +108,7 @@ export default function Records() {
                   min={0}
                   max="100"
                   value="40"
-                  className="range range-primary"
+                  className="range "
                 />
               </div>
             </div>
@@ -156,11 +156,7 @@ export default function Records() {
           <div className="flex items-center gap-4">
             <div className="form-control">
               <label className="label cursor-pointer">
-                <input
-                  type="checkbox"
-                  defaultChecked
-                  className="checkbox checkbox-primary"
-                />
+                <input type="checkbox" defaultChecked className="checkbox " />
               </label>
             </div>
             <p className="text-[16px] text-[#000]">Select all</p>

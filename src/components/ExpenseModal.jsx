@@ -1,13 +1,12 @@
 export function ExpenseModal() {
   return (
-    <div className="w-[792px] h-content mx-auto">
-      <div className="w-[792px] h-[68px] px-6 py-5 bg-white border-b border-slate-200 justify-between items-center inline-flex">
+    <div className="w-[792px] h-content mx-auto rounded-[20px]">
+      <div className="w-[792px] h-[68px] px-6 py-5 bg-white border-b border-slate-200 justify-between items-center inline-flex rounded-[20px_20px_0_0]">
         <div className="text-slate-900 text-xl font-semibold font-sans leading-7">
           Add Record
         </div>
-        <div className="modal-action flex justify-center items-center"></div>
       </div>
-      <div className="w-[396px] h-[500px] px-6 pt-5 bg-white flex-col justify-start items-start gap-5 inline-flex">
+      <div className="w-[396px] h-[500px] px-6 pt-5 bg-white flex-col justify-start items-start gap-5 inline-flex rounded-[0_0_0_20px]">
         <div className="self-stretch bg-gray-100 rounded-[100px] justify-start items-start gap-1 inline-flex">
           <div className="grow shrink basis-0 h-10 px-3 bg-blue-600 rounded-[20px] justify-center items-center gap-1 flex">
             <div className="text-gray-50 text-base font-normal font-sans leading-normal">
@@ -20,8 +19,8 @@ export function ExpenseModal() {
             </div>
           </div>
         </div>
-        <div className="self-stretch h-[340px] flex-col justify-start items-start gap-8 flex">
-          <div className="self-stretch h-[300px] flex-col justify-start items-start gap-12 flex">
+        <div className="self-stretch h-[340px] flex-col justify-start items-start gap-3 flex">
+          <div className="self-stretch h-[300px] flex-col justify-start items-start gap-8 flex">
             <div className="self-stretch h-[76px] px-4 py-3 bg-gray-100 rounded-lg border border-gray-300 flex-col justify-center items-start flex">
               <div className="text-neutral-900 text-base font-normal font-sans leading-normal">
                 Amount
@@ -77,10 +76,12 @@ export function ExpenseModal() {
               </div>
             </div>
           </div>
-          <div className="self-stretch h-20 px-3 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex"></div>
+          <div className="w-[350px] h-[40px] px-3 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex text-[white]">
+            Add Record
+          </div>
         </div>
       </div>
-      <div className="w-[396px] h-[500px] px-6 pt-11 pb-3 bg-white flex-col justify-start items-start gap-5 inline-flex">
+      <div className="w-[396px] h-[500px] px-6 pt-11 pb-3 bg-white flex-col justify-start items-start gap-5 inline-flex rounded-[0_0_20px_0]">
         <div className="self-stretch h-[376px] flex-col justify-start items-start gap-12 flex">
           <div className="self-stretch h-12 rounded-lg flex-col justify-center items-start flex gap-2">
             <div className="h-[18px] justify-start items-center inline-flex">

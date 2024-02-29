@@ -1,13 +1,8 @@
-import Sign from "@/components/Sign";
-import Header from "@/components/Header";
-import Layout from "@/components/layout";
+import Login from "./login";
 export default function Home() {
   return (
     <div className="max-w-[1420px] m-auto bg-[#F3F4F6]">
-      <Sign />
+      <Login />
     </div>
   );
 }
-Home.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};
