@@ -1,7 +1,7 @@
 import Geld from "@/components/icons/Geld";
 import Vector from "@/components/icons/Vector";
 import Link from "next/link";
-export default function StepTwo() {
+export default function StepTwo({ setShowLoad }) {
   return (
     <div className="flex  py-10 flex-col items-center gap-[141px] bg-[#FFF] h-[1000px] ">
       <div className="flex flex-col items-center gap-10">
@@ -44,11 +44,15 @@ export default function StepTwo() {
             How much cash do you have in your wallet?
           </p>
         </div>
-        <Link href="/StepThree">
-          <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
-            <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
-          </button>
-        </Link>
+
+        <button
+          onClick={() => {
+            setShowLoad("StepThree");
+          }}
+          className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]"
+        >
+          <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
+        </button>
       </div>
     </div>
   );

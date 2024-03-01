@@ -36,7 +36,7 @@ export default function Header() {
           <div className=" ">
             <ExpenseModal />
           </div>
-          <form method="dialog" className="modal-backdrop">
+          <form method="dialog" className="modal-backdrop w-full">
             <button>close</button>
           </form>
         </dialog>

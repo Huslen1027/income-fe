@@ -8,7 +8,7 @@ export default function IncomeExpense1() {
           Income - Expense
         </h1>
       </div>
-      <div className="flex jusitfy-center items-center w-[580px] h-[284px] pl-12">
+      <div className="flex jusitfy-center items-center w-[580px] h-[284px] pl-2">
         <July />
       </div>
     </div>

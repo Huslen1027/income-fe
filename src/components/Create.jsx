@@ -42,13 +42,13 @@ export default function Create({ setShowLoad }) {
             placeholder=" Re-password"
           />
 
-          <div className="w-96 h-12 px-4 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex">
-            <button
-              onClick={() => {
-                setShowLoad("stepOne");
-              }}
-              className="text-white text-xl font-normal   leading-7"
-            >
+          <div
+            onClick={() => {
+              setShowLoad("StepOne");
+            }}
+            className="w-96 h-12 px-4 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex"
+          >
+            <button className="text-white text-xl font-normal   leading-7">
               Sign up
             </button>
           </div>

@@ -1,9 +1,20 @@
+import { AddCategory } from "@/pages/utils/addCategory";
+import Closeicon from "./icons/Closeicon";
+import { useState } from "react";
 export function ExpenseModal() {
+  const [SwitchColor, setSwichColor] = useState(0);
+  const ExitButton = () => {
+    return <div></div>;
+  };
   return (
     <div className="w-[792px] h-content mx-auto relative bottom-[150px]">
       <div className="w-[792px] h-[68px] px-6 py-5 bg-white border-b border-slate-200 justify-between items-center inline-flex rounded-[20px_20px_0_0]">
-        <div className="text-slate-900 text-xl font-semibold font-sans leading-7">
-          Add Record
+        <div className="text-slate-900 text-xl font-semibold font-sans leading-7 flex items-center justify-between relative">
+          <p>Add Category</p>
+
+          <button className="absolute left-[720px]">
+            <Closeicon />
+          </button>
         </div>
       </div>
       <div className="w-[396px] h-[500px] px-6 pt-5 bg-white flex-col justify-start items-start gap-5 inline-flex rounded-[0_0_0_20px]">
@@ -33,19 +44,38 @@ export function ExpenseModal() {
                 />
               </div>
             </div>
-            <div className="self-stretch h-12 rounded-lg flex-col justify-center items-start flex gap-2">
+            <div className="self-stretch rounded-lg flex-col justify-center items-start flex gap-2">
               <div className="h-[18px] justify-start items-center inline-flex">
-                <div className="text-gray-800 text-base font-normal font-sans leading-normal">
+                <div className="text-gray-800 text-base font-normal font-sans leading-normal  ">
                   Category
                 </div>
               </div>
-              <select className="select select-bordered w-[348px] h-12 bg-gray-50">
-                <option disabled selected>
-                  Choose
-                </option>
-                <option>Han Solo</option>
-                <option>Greedo</option>
-              </select>
+
+              <div className="dropdown dropdown-hover   h-12   ">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className="btn m-1 w-[348px] flex items-start flex-col  font-normal opacity-[0.5] "
+                >
+                  Find or choose category
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-2 bg-base-100 w-[358px] flex rounded-[10px]"
+                >
+                  {AddCategory.map((e) => {
+                    return (
+                      <div>
+                        <li>
+                          <a className="">
+                            {e.hello} {e.icon} {e.text}
+                          </a>
+                        </li>
+                      </div>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
 
             <div className="self-stretch justify-start items-start gap-3 inline-flex">

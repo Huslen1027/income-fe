@@ -2,7 +2,7 @@ import Geld from "@/components/icons/Geld";
 import Vector from "@/components/icons/Vector";
 import Dollar from "@/components/icons/Dollar";
 import Link from "next/link";
-export default function StepOne() {
+export default function StepOne({ setShowLoad }) {
   return (
     <div className="flex  py-10 flex-col items-center gap-[151px] bg-[#FFF] h-[1000px] ">
       <div className="flex flex-col items-center gap-4">
@@ -35,12 +35,15 @@ export default function StepOne() {
             transaction in other currencies will be calculated based on this one{" "}
           </p>
         </div>
-        <Link href="/StepTwo">
-          {" "}
-          <button className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]">
-            <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
-          </button>
-        </Link>
+
+        <button
+          onClick={() => {
+            setShowLoad("StepTwo");
+          }}
+          className="flex w-[384px] h-[48px] gap-1 justify-center items-center rounded-[20px]  bg-[#0166FF]"
+        >
+          <p className="text-[#FFFFFF] text-[20px]">Confirm</p>
+        </button>
       </div>
     </div>
   );

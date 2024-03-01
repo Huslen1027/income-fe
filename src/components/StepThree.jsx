@@ -1,7 +1,7 @@
 import Geld from "@/components/icons/Geld";
 import Vector from "@/components/icons/Vector";
 import Link from "next/link";
-export default function StepThree() {
+export default function StepThree({ setShowLoad }) {
   return (
     <div className="flex  py-10 flex-col items-center gap-[141px] bg-[#FFF] h-[1000px] ">
       <div className="flex flex-col items-center gap-10">

@@ -10,14 +10,13 @@ export default function Signup() {
       <div className={`${showLoad == "signup" ? "block" : "hidden"}`}>
         <Create showLoad={showLoad} setShowLoad={setShowLoad} />
       </div>
-
-      <div className={`${showLoad == "stepOne" ? "block" : "hidden"}`}>
+      <div className={`${showLoad == "StepOne" ? "block" : "hidden"}`}>
         <StepOne showLoad={showLoad} setShowLoad={setShowLoad} />
       </div>
-      <div className={`${showLoad == "stepTwo" ? "block" : "hidden"}`}>
+      <div className={`${showLoad == "StepTwo" ? "block" : "hidden"}`}>
         <StepTwo showLoad={showLoad} setShowLoad={setShowLoad} />
       </div>
-      <div className={`${showLoad == "stepThree" ? "block" : "hidden"}`}>
+      <div className={`${showLoad == "StepThree" ? "block" : "hidden"}`}>
         <StepThree />
       </div>
     </div>
