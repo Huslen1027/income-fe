@@ -24,7 +24,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div class="avatar flex gap-5 justify-center items-center">
+      <d iv class="avatar flex gap-5 justify-center items-center">
         <button
           className="h-[32px] flex w-[115px] rounded-3xl  justify-center gap-1 items-center bg-[#0166FF] border-none text-[white]"
           onClick={() => document.getElementById("my_modal_2").showModal()}
@@ -43,7 +43,7 @@ export default function Header() {
         <div class="w-12 rounded-full">
           <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
-      </div>
+      </d>
     </div>
   );
 }

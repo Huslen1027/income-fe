@@ -4,14 +4,10 @@ import Link from "next/link";
 export default function Create({ setShowLoad }) {
   return (
     <div
-      className="flex w-[1240px]
-     h-[1100px] relative"
+      className="flex 
+     min-h-[100vh] relative"
     >
-      <div
-        className="w-[1240px]
-       h-[1200px] left-[1032px] absolute bg-blue-600"
-      ></div>
-      <div className="left-[312px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex w-[50%] h-full">
+      <div className="flex flex-col justify-center items-center gap-10 w-[50%]">
         <div className="flex justify-center items-center gap-4">
           <Vector />
           <Geld />
@@ -67,6 +63,10 @@ export default function Create({ setShowLoad }) {
           </Link>
         </div>
       </div>
+      <div
+        className="w-[50%]
+        bg-blue-600"
+      ></div>
     </div>
   );
 }

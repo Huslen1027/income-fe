@@ -12,7 +12,7 @@ export function ExpenseModal() {
         <div className="text-slate-900 text-xl font-semibold font-sans leading-7 flex items-center justify-between relative">
           <p>Add Category</p>
 
-          <button className="absolute left-[720px]">
+          <button className=" absolute left-[720px]">
             <Closeicon />
           </button>
         </div>

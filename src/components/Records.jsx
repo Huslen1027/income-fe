@@ -2,6 +2,7 @@ import Leading from "./icons/Leading";
 import { Category } from "@/pages/utils/category";
 import BluePlus from "./icons/BLueplus";
 import { EndRecord } from "@/pages/utils/endRecord";
+import AddCategory from "./AddCategory";
 export default function Records() {
   return (
     <div className="w-[1440px] h-[1208px] bg-[#F3F4F6] px-[120px] flex items-start gap-6">
@@ -15,10 +16,6 @@ export default function Records() {
             <Leading />
             Add
           </button>
-          <dialog id="my_modal_2" className="modal">
-            <div className="modal-box"></div>
-            <form method="dialog" className="modal-backdrop"></form>
-          </dialog>
         </div>
         <div className="flex w-[200px] flex-col justify-center items-center ">
           <input
@@ -80,11 +77,8 @@ export default function Records() {
                 </div>
               );
             })}
-            <div className="flex justify-between items-center ">
-              <button className="flex h-[32px] py-3 justify-center items-center gap-2 rounded-[8px] ">
-                <BluePlus />
-                <p className="text-[16px] text-[#1F2937]">Add Category</p>
-              </button>
+            <div className="flex justify-between items-center">
+              <AddCategory />
             </div>
           </div>
           <div className="flex flex-col items-start gap-4">
@@ -156,7 +150,7 @@ export default function Records() {
           <div className="flex items-center gap-4">
             <div className="form-control">
               <label className="label cursor-pointer">
-                <input type="checkbox" defaultChecked className="checkbox " />
+                <input type="checkbox" default className="checkbox " />
               </label>
             </div>
             <p className="text-[16px] text-[#000]">Select all</p>

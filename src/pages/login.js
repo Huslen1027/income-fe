@@ -4,16 +4,11 @@ import Link from "next/link";
 export default function Login() {
   return (
     <div
-      className="
-     h-[1200px] relative "
+      className="flex
+     min-h-[100vh] relative "
     >
-      <div
-        className="w-[1200px]
-       h-[1200px] left-[1032px] absolute bg-blue-600"
-      ></div>
-
-      <div className="left-[422px] top-[200.84px] absolute flex-col justify-start items-center gap-10 inline-flex">
-        <div className="p-[5.40px] justify-start items-center gap-[9.46px] inline-flex" />
+      <div className="flex flex-col justify-center items-center gap-10 w-[50%]">
+        <div className="p-[5.40px] justify-start items-center gap-[9.46px] " />
         <div className="flex justify-center items-center gap-4">
           <Vector />
           <Geld />
@@ -49,7 +44,10 @@ export default function Login() {
             Don’t have account?
           </div>
           <div className="w-[80px] px-3 rounded-[20px] justify-center items-center gap-1 flex">
-            <Link href="/Create">
+            <Link
+              href="/signup
+            "
+            >
               <button className="text-blue-600 text-base font-normal leading-normal">
                 Sign up
               </button>
@@ -57,6 +55,10 @@ export default function Login() {
           </div>
         </div>
       </div>
+      <div
+        className="w-[50%]
+   bg-blue-600"
+      ></div>
     </div>
   );
 }
