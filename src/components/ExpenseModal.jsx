@@ -2,7 +2,7 @@ import { AddCategory } from "@/pages/utils/addCategory";
 import Closeicon from "./icons/Closeicon";
 import { useState } from "react";
 export function ExpenseModal() {
-  const [SwitchColor, setSwichColor] = useState(0);
+  const [SwitchColor, setSwichColor] = useState("blue");
   const ExitButton = () => {
     return <div></div>;
   };
@@ -18,15 +18,37 @@ export function ExpenseModal() {
         </div>
       </div>
       <div className="w-[396px] h-[500px] px-6 pt-5 bg-white flex-col justify-start items-start gap-5 inline-flex rounded-[0_0_0_20px]">
-        <div className="self-stretch bg-gray-100 rounded-[100px] justify-start items-start gap-1 inline-flex">
-          <div className="grow shrink basis-0 h-10 px-3 bg-blue-600 rounded-[20px] justify-center items-center gap-1 flex">
-            <div className="text-gray-50 text-base font-normal font-sans leading-normal">
-              Expense
+        <div className="self-stretch bg-gray-100 rounded-[100px] justify-start items-start gap-1 inline-flex w-[350px] h-[40px]">
+          <div className="grow shrink basis-0  px-3 rounded-[20px] justify-center items-center gap-1 flex w-[175px] h-[40px]">
+            <div className=" text-base font-normal font-sans leading-normal">
+              <button
+                className={`rounded-3xl w-[175px] h-[40px] ${
+                  SwitchColor == "blue"
+                    ? "bg-[#0166FF] text-[#F9FAFB] "
+                    : "bg-[#F3F4F6]  text-[#1F2937]"
+                }`}
+                onClick={() => {
+                  setSwichColor("blue");
+                }}
+              >
+                Expense
+              </button>
             </div>
           </div>
-          <div className="grow shrink basis-0 h-10 px-3 bg-gray-100 rounded-[20px] justify-center items-center gap-1 flex">
-            <div className="text-gray-800 text-base font-normal font-sans leading-normal">
-              Income
+          <div className="grow shrink basis-0  px-3 bg-gray-100 rounded-[20px] justify-center items-center gap-1 flex w-[175px] h-[40px]">
+            <div className="text-gray-800 text-base font-normal font-sans leading-normal w-[175px] h-[40px]">
+              <button
+                className={`rounded-3xl w-[175px] h-[40px] ${
+                  SwitchColor == "green"
+                    ? "bg-[#16A34A] text-[#F9FAFB]"
+                    : "bg-[#F3F4F6] text-[#1F2937]"
+                }`}
+                onClick={() => {
+                  setSwichColor("green");
+                }}
+              >
+                Income
+              </button>
             </div>
           </div>
         </div>
@@ -109,8 +131,19 @@ export function ExpenseModal() {
               </div>
             </div>
           </div>
-          <div className="w-[350px] h-[40px] px-3 bg-blue-600 rounded-[20px] justify-center items-center gap-1 inline-flex text-[white]">
-            Add Record
+          <div className="">
+            <button
+              onClick={() => {
+                setSwichColor("blue");
+              }}
+              className={`w-[350px] h-[40px] px-3  rounded-[20px] justify-center items-center gap-1 inline-flex  ${
+                SwitchColor == "blue"
+                  ? "bg-[#0166FF] text-[#FFFFFF]"
+                  : "bg-[#16A34A] text-[#F9FAFB]"
+              }`}
+            >
+              Add Record
+            </button>
           </div>
         </div>
       </div>
