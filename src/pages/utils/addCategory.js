@@ -1,4 +1,3 @@
-import Homee from "@/components/icons/Homee";
 import Gift from "@/components/icons/categoryicon/Gift";
 import Food from "@/components/icons/categoryicon/Food";
 import ShoppingIcon from "@/components/icons/categoryicon/ShoppingIcon";
