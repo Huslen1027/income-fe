@@ -1,5 +1,9 @@
 import BluePlus from "./icons/BLueplus";
 import { AddCategory2 } from "@/pages/utils/addCategory2";
+import HouseIcon from "./icons/addCategoryicon/HouseIcon";
+import ArrowDropdown from "./icons/addCategoryicon/ArrowDropdown";
+import Houseline from "./icons/addCategoryicon/Houseline";
+
 export default function AddCategory() {
   return (
     <div className="">
@@ -15,7 +19,7 @@ export default function AddCategory() {
         className="modal flex rounded-[12px] items-center justify-center flex-col "
       >
         <div className="modal-box w-[524px] h-[296px] flex flex-col gap-5">
-          <div className=" flex items-center justify-between border-b bg-[#FFF] h-[48px]">
+          <div className=" flex items-center justify-between border-b  bg-[#FFF] h-[48px]">
             <p className="text-[20px] text-[#000]">Add Category</p>
             <form method="dialog">
               <button className="btn  btn-sm btn-circle btn-ghost">✕</button>
@@ -25,18 +29,35 @@ export default function AddCategory() {
             return (
               <div key={index}>
                 <div className="flex flex-col items-start ">
-                  <div className="flex py-6  gap-5 bg-[#fff]">
+                  <div className="flex py-6  gap-5 bg-[#fff] ">
                     <div>
-                      <select className="select select-bordered w-[84px] h-[40px] max-w-xs">
-                        <option disabled selected></option>
-                        <option>Han Solo</option>
-                        <option>Greedo</option>
-                      </select>
+                      <div className="dropdown bg-[#F9FAFB] rounded-lg  border">
+                        <button
+                          tabIndex={0}
+                          className="flex w-[84px] h-[48px] justify-center items-center rounded-lg gap-3"
+                        >
+                          <HouseIcon />
+                          <ArrowDropdown />
+                        </button>
+                        <ul
+                          tabIndex={0}
+                          className="dropdown-content z-[10000] menu p-2 shadow bg-base-100 rounded-box w-[312px] h-[288px]"
+                        >
+                          <a>
+                            {" "}
+                            <Houseline />
+                          </a>
+
+                          <li>
+                            <a>Item 2</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
 
                     <div className="">
-                      <label className="form-control w-[350px] h-[48px] max-w-xs">
-                        <select className="select select-bordered">
+                      <label className="form-control w-[350px] h-[48px] max-w-xs ">
+                        <select className="select select-bordered bg-[#F9FAFB]">
                           <option disabled selected>
                             Name
                           </option>

@@ -2,7 +2,7 @@ import Foodicon from "@/components/icons/Foodicon";
 export const EndRecord = [
   {
     Foodicon: (
-      <input type="checkbox" defaultChecked className="checkbox checkbox-md" />
+      <input type="checkbox" default className="checkbox checkbox-md" />
     ),
     icon: <Foodicon />,
     has: "-",
@@ -12,7 +12,7 @@ export const EndRecord = [
   },
   {
     Foodicon: (
-      <input type="checkbox" defaultChecked className="checkbox checkbox-md" />
+      <input type="checkbox" default className="checkbox checkbox-md" />
     ),
     icon: <Foodicon />,
     has: "-",
@@ -22,7 +22,7 @@ export const EndRecord = [
   },
   {
     Foodicon: (
-      <input type="checkbox" defaultChecked className="checkbox checkbox-md" />
+      <input type="checkbox" default className="checkbox checkbox-md" />
     ),
     icon: <Foodicon />,
     has: "-",
@@ -32,7 +32,7 @@ export const EndRecord = [
   },
   {
     Foodicon: (
-      <input type="checkbox" defaultChecked className="checkbox checkbox-md" />
+      <input type="checkbox" default className="checkbox checkbox-md" />
     ),
     icon: <Foodicon />,
     has: "-",
@@ -42,7 +42,7 @@ export const EndRecord = [
   },
   {
     Foodicon: (
-      <input type="checkbox" defaultChecked className="checkbox checkbox-md" />
+      <input type="checkbox" default className="checkbox checkbox-md" />
     ),
     icon: <Foodicon />,
     has: "-",
