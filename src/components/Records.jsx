@@ -1,12 +1,12 @@
 import Leading from "./icons/Leading";
 import { Category } from "@/pages/utils/category";
-import BluePlus from "./icons/BLueplus";
+import RangeSlider from "./Slider";
 import { EndRecord } from "@/pages/utils/endRecord";
 import AddCategory from "./AddCategory";
 export default function Records() {
   return (
     <div className="w-[1440px] h-[1208px] bg-[#F3F4F6] px-[120px] flex items-start gap-6 ">
-      <div className=" w-[250px] h-[1032px] inline-flex py-6 px-4 flex-col items-start gap-6 rounded-[12px] border border-[#E5E7EB] bg-[#F9FAFB] mt-5">
+      <div className=" w-[250px] h-[1082px] inline-flex py-6 px-4 flex-col items-start gap-6 rounded-[12px] border border-[#E5E7EB] bg-[#F9FAFB] mt-5">
         <div className="flex flex-col items-start gap-6  ">
           <h1 className="text-[24px] text-[#000]">Records</h1>
           <button
@@ -59,21 +59,38 @@ export default function Records() {
             </label>
           </div>
         </div>
-        <div className="  h-[520px] flex flex-col items-start gap-4">
+        <div className="  h-[520px] flex flex-col items-start gap-5">
           <div className="flex justify-between items-center w-[210px]">
             <h1 className="text-[16px] text-[#1F2937]">Category</h1>
             <button className="flex h-[32px]  justify-center items-center gap-1 rounded-[20px] opacity-20">
               Clear
             </button>
           </div>
-          <div className="flex flex-col gap-4 h-[472px] w-[210px]">
+
+          <div className="flex flex-col gap-2 h-[462px] w-[210px]">
             {Category.map((e, index) => {
               return (
-                <div key={index} className="flex justify-between items-center">
-                  <button className="flex gap-2 text-[15px] text-[#1F2937] items-center">
-                    {e.icon} {e.name}
-                  </button>
-                  {e.Leadingicon}
+                <div
+                  key={index}
+                  className="flex justify-between items-center w-[250px] h-[32px]"
+                >
+                  <div className="collapse ">
+                    <input
+                      className="w-[250px] h-[32px]"
+                      type="radio"
+                      name="my-accordion-1"
+                    />
+                    <div className="collapse-title text-xl font-medium flex justify-between ">
+                      <div className="flex items-center gap-2 text-[16px] text-[#1F2937] ">
+                        {e.icon}
+                        {e.name}
+                      </div>
+                      <div>{e.Leadingicon}</div>
+                    </div>
+                    <div className="collapse-content">
+                      <p>hello</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
@@ -81,36 +98,16 @@ export default function Records() {
               <AddCategory />
             </div>
           </div>
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start gap-4 mt-7">
             <h1 className="text-[16px] text-[#1F2937]">Amount Range</h1>
             <div className="flex flex-col items-center gap-4">
-              <div className="flex gap-4 items-start">
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
-                />
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
-                />
-              </div>
-              <div className="w-[220px] h-[48px]">
-                <input
-                  type="range"
-                  min={0}
-                  max="100"
-                  value="40"
-                  className="range "
-                />
-              </div>
+              <RangeSlider />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex w-[900px] flex-col items-start gap-6">
+      <div className="flex w-[900px] flex-col items-start gap-6 ">
         <div className="inline-flex items-center gap-4 mt-10 ">
           <button className="flex w-[32px] h-[32px] justify-center gap-1 items-center rounded-[8px] bg-[#E5E7EB]">
             <svg

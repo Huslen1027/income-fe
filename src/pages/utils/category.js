@@ -28,7 +28,7 @@ export const Category = [
   },
   {
     icon: <Eye />,
-    name: "Life & Entertainment",
+    name: "Entertainment",
     Leadingicon: <LeadingIcon />,
   },
   {

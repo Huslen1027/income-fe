@@ -60,7 +60,7 @@ export function ExpenseModal() {
               </div>
               <div className="justify-start items-center gap-2 inline-flex">
                 <input
-                  type="text"
+                  type="number"
                   className="bg-gray-100 outline-none text-gray-400 text-xl font-normal font-sans leading-7"
                   placeholder="₮ 000.00"
                 />
