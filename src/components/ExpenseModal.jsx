@@ -3,8 +3,23 @@ import Closeicon from "./icons/Closeicon";
 import { useState } from "react";
 export function ExpenseModal() {
   const [SwitchColor, setSwichColor] = useState("blue");
+  const [show, setShow] = useState(true);
+  const [value, setValue] = useState("");
+  const handleCatevalue = (logo) => {
+    setValue(logo);
+    console.log(logo);
+  };
   const ExitButton = () => {
-    return <div></div>;
+    setShow(show);
+  };
+  const [valueD, setValueD] = useState("Choose");
+  const [icon, setIcon] = useState("");
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const handleGetValueD = (valueD, icon) => {
+    setValueD(valueD);
+    setIcon(icon);
+    setDropdownVisible(false);
+    console.log(valueD, icon);
   };
   return (
     <div className="w-[792px] h-content mx-auto relative bottom-[150px]">
@@ -12,7 +27,7 @@ export function ExpenseModal() {
         <div className="text-slate-900 text-xl font-semibold font-sans leading-7 flex items-center justify-between relative">
           <p>Add Category</p>
 
-          <button className=" absolute left-[720px]">
+          <button onClick={ExitButton} className=" absolute left-[720px]">
             <Closeicon />
           </button>
         </div>
@@ -75,25 +90,37 @@ export function ExpenseModal() {
 
               <div className="dropdown dropdown-hover   h-12   ">
                 <div
+                  onClick={() => setDropdownVisible(!dropdownVisible)}
                   tabIndex={0}
                   role="button"
                   className="btn m-1 w-[348px] flex items-start flex-col  font-normal opacity-[0.5] "
                 >
-                  Find or choose category
+                  <div className="flex flex-row-reverse items-center gap-[5px]">
+                    <div className="">{valueD}</div>
+                    <div>{icon}</div>
+                  </div>
                 </div>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-2 bg-base-100 w-[358px] flex rounded-[10px]"
+                  className={`dropdown-content z-[1] menu p-2 bg-base-100 w-[358px] flex rounded-[10px] ${
+                    dropdownVisible ? "block" : "hidden"
+                  }`}
                 >
                   {AddCategory.map((e) => {
                     return (
-                      <div>
-                        <li>
-                          <a className="">
-                            {e.hello} {e.icon} {e.text}
-                          </a>
-                        </li>
-                      </div>
+                      <a
+                        className="flex flex-col justify-center items-start text-[#000000]"
+                        onClick={() => {
+                          handleGetValueD(e.text, e.icon);
+                        }}
+                      >
+                        <div className="flex text-center gap-2 py-2 px-2 ">
+                          <p>{e.icon}</p>
+                          <p className="text-[#000000] py-0.5 text-base not-italic font-normal">
+                            {e.text}
+                          </p>
+                        </div>
+                      </a>
                     );
                   })}
                 </ul>

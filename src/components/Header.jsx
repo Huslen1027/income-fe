@@ -7,7 +7,7 @@ import { ExpenseModal } from "./ExpenseModal";
 export default function Header() {
   const router = useRouter();
   return (
-    <div className=" max-w-[1440px] m-auto flex justify-between items-center  bg-[#fff] px-[120px] py-4 ">
+    <div className=" max-w-[1440px] h-[80px] m-auto flex justify-between items-center  bg-[#fff] px-[120px] py-4 ">
       <div>
         <div class="navbar ">
           <div class="flex-none">
@@ -18,7 +18,7 @@ export default function Header() {
           </div>
           <div class="flex-1">
             <Link href="/record">
-              <p class="btn btn-ghost text-base">Record</p>
+              <p class="btn btn-ghost text-base ">Record</p>
             </Link>
           </div>
         </div>
@@ -26,16 +26,19 @@ export default function Header() {
 
       <div class="flex gap-5 justify-center items-center">
         <button
-          className="h-[32px] flex w-[115px] rounded-3xl  justify-center gap-1 items-center bg-[#0166FF] border-none text-[white]"
+          className="h-[32px] flex w-[115px]   rounded-3xl  justify-center gap-1 items-center bg-[#0166FF] border-none text-[white]"
           onClick={() => document.getElementById("my_modal_2").showModal()}
         >
           <Leading />
           Record
         </button>
-        <dialog id="my_modal_2" className="modal">
+        <dialog id="my_modal_2" className="modal  relative z-0">
           <ExpenseModal />
-          <form method="dialog" className="modal-backdrop">
-            <button>close</button>
+          <form
+            method="dialog"
+            className="modal-backdrop absolute z-10  w-[20px] h-[20px] top-[160px] right-[750px]  "
+          >
+            <button className="">close</button>
           </form>
         </dialog>
         <div className="navbar w-[10px]">
@@ -46,7 +49,7 @@ export default function Header() {
               role="button"
               className="btn btn-ghost btn-circle avatar"
             >
-              <div className="w-10 rounded-full">
+              <div className="w-10 rounded-full ">
                 <img
                   alt="Tailwind CSS Navbar component"
                   src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"

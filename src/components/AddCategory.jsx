@@ -3,6 +3,7 @@ import { AddCategory2 } from "@/pages/utils/addCategory2";
 import HouseIcon from "./icons/addCategoryicon/HouseIcon";
 import ArrowDropdown from "./icons/addCategoryicon/ArrowDropdown";
 import Houseline from "./icons/addCategoryicon/Houseline";
+import { useState } from "react";
 
 export default function AddCategory() {
   return (
