@@ -24,7 +24,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div class="avatar flex gap-5 justify-center items-center">
+      <div class="flex gap-5 justify-center items-center">
         <button
           className="h-[32px] flex w-[115px] rounded-3xl  justify-center gap-1 items-center bg-[#0166FF] border-none text-[white]"
           onClick={() => document.getElementById("my_modal_2").showModal()}
@@ -38,9 +38,39 @@ export default function Header() {
             <button>close</button>
           </form>
         </dialog>
-
-        <div class="w-12 rounded-full">
-          <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <div className="navbar w-[10px]">
+          {" "}
+          <div className="dropdown dropdown-end w-[30px]">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
