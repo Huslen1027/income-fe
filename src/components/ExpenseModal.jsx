@@ -63,12 +63,12 @@ export function ExpenseModal() {
           <div className="self-stretch h-[300px] flex-col justify-start items-start gap-8 flex">
             <div className="self-stretch h-[76px] px-4 py-3 bg-gray-100 rounded-lg border border-gray-300 flex-col justify-center items-start flex">
               <div className="text-neutral-900 text-base font-normal font-sans leading-normal">
-                <p> Amount</p>
+                <p className=""> Amount</p>
               </div>
               <div className="justify-start items-center gap-2 inline-flex">
                 <input
                   type="number"
-                  className="bg-gray-100 outline-none text-gray-400 text-xl font-normal font-sans leading-7"
+                  className="bg-gray-100 outline-none  text-xl font-normal font-sans leading-7 text-[black]"
                   placeholder="₮ 000.00"
                 />
               </div>
@@ -88,13 +88,13 @@ export function ExpenseModal() {
                   className="btn m-1 w-[348px] flex items-start flex-col  font-normal opacity-[0.5] "
                 >
                   <div className="flex flex-row-reverse items-center gap-[5px]">
-                    <div>{valueD}</div>
+                    <div className="text-black">{valueD}</div>
                     <div>{icon}</div>
                   </div>
                 </div>
                 <div
                   tabIndex={0}
-                  className={`dropdown-content z-[1] menu p-2 bg-base-100 w-[358px] flex rounded-[10px] ${
+                  className={`dropdown-content z-[1] menu p-2 bg-base-100 w-[358px] flex rounded-[10px]  ${
                     dropdownVisible ? "block" : "hidden"
                   }`}
                 >
@@ -177,7 +177,7 @@ export function ExpenseModal() {
               <div className="grow shrink basis-0 text-slate-400 text-base font-normal font-sans leading-normal">
                 <input
                   type="text"
-                  className="bg-gray-50 outline-none"
+                  className="bg-gray-50 outline-none text-[black]"
                   placeholder="Write here"
                 />
               </div>
@@ -186,7 +186,7 @@ export function ExpenseModal() {
           <div className="self-stretch h-[280px] rounded-lg flex-col justify-center items-start flex gap-2">
             <div className="h-[18px] justify-start items-center inline-flex">
               <div className="text-gray-800 text-base font-normal font-sans leading-normal">
-                <p> Payee</p>
+                <p> Note</p>
               </div>
             </div>
             <div className="self-stretch grow shrink basis-0 p-4 bg-gray-100 rounded-lg border border-gray-300 justify-start items-start inline-flex">
@@ -195,7 +195,7 @@ export function ExpenseModal() {
                   name=""
                   id=""
                   rows="10"
-                  className="bg-gray-100 outline-none"
+                  className="bg-gray-100 outline-none text-[black]"
                   placeholder="Write here"
                 ></textarea>
               </div>
