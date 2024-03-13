@@ -33,12 +33,12 @@ export const Category = [
   },
   {
     icon: <Eye />,
-    name: "Communication, PC",
+    name: "Communication",
     Leadingicon: <LeadingIcon />,
   },
   {
     icon: <Eye />,
-    name: "Financial expenses",
+    name: "Financial ",
     Leadingicon: <LeadingIcon />,
   },
   {

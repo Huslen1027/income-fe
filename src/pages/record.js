@@ -1,12 +1,12 @@
 import Records from "@/components/Records";
-import Layout from "@/components/layout";
+
+const Layout = dynamic(() => import("@/components/Layout"), { ssr: false });
 export default function Record() {
   return (
-    <div className=" max-w-[1440px] m-auto ">
-      <Records />
-    </div>
+    <Layout>
+      <div className=" max-w-[1440px] m-auto ">
+        <Records />
+      </div>
+    </Layout>
   );
 }
-Record.getLayout = function getLayout(page) {
-  return <Layout>{page}</Layout>;
-};

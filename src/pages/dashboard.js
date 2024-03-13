@@ -1,5 +1,5 @@
 import Dashboardd from "@/components/Dashboardd";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
 export default function Dashboard() {
   return (
     <div>
@@ -7,6 +7,7 @@ export default function Dashboard() {
     </div>
   );
 }
+
 Dashboard.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };

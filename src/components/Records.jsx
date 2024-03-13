@@ -3,6 +3,7 @@ import { Category } from "@/pages/utils/category";
 import RangeSlider from "./Slider";
 import { EndRecord } from "@/pages/utils/endRecord";
 import AddCategory from "./AddCategory";
+import { ExpenseModal } from "./ExpenseModal";
 export default function Records() {
   return (
     <div className="w-[1440px] h-[1208px] bg-[#F3F4F6] px-[120px] flex items-start gap-6 ">
@@ -10,13 +11,14 @@ export default function Records() {
         <div className="flex flex-col items-start gap-6  ">
           <h1 className="text-[24px] text-[#000]">Records</h1>
           <button
+            onClick={() => document.getElementById("my_modal_3").showModal()}
             className=" flex justify-center items-center h-[32px] w-[200px] rounded-3xl gap-1 bg-[#0166FF] border-none text-[white]"
-            onClick={() => document.getElementById("my_modal_2").showModal()}
           >
             <Leading />
             Add
           </button>
         </div>
+
         <div className="flex w-[200px] flex-col justify-center items-center ">
           <input
             type="text"

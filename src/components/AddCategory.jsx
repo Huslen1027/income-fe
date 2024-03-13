@@ -3,20 +3,19 @@ import { AddCategory2 } from "@/pages/utils/addCategory2";
 import HouseIcon from "./icons/addCategoryicon/HouseIcon";
 import ArrowDropdown from "./icons/addCategoryicon/ArrowDropdown";
 import Houseline from "./icons/addCategoryicon/Houseline";
-import { useState } from "react";
 
 export default function AddCategory() {
   return (
-    <div className="">
+    <div>
       <button
         className="flex h-[32px] py-3 justify-center items-center gap-2 rounded-[8px] "
-        onClick={() => document.getElementById("my_modal_3").showModal()}
+        onClick={() => document.getElementById("my_modal_2").showModal()}
       >
         <BluePlus />
         Add Gategory
       </button>
       <dialog
-        id="my_modal_3"
+        id="my_modal_2"
         className="modal flex rounded-[12px] items-center justify-center flex-col "
       >
         <div className="modal-box w-[524px] h-[296px] flex flex-col gap-5">

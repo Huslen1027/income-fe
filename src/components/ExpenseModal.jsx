@@ -1,17 +1,8 @@
 import { AddCategory } from "@/pages/utils/addCategory";
-import Closeicon from "./icons/Closeicon";
 import { useState } from "react";
+
 export function ExpenseModal() {
   const [SwitchColor, setSwichColor] = useState("blue");
-  const [show, setShow] = useState(true);
-  const [value, setValue] = useState("");
-  const handleCatevalue = (logo) => {
-    setValue(logo);
-    console.log(logo);
-  };
-  const ExitButton = () => {
-    setShow(show);
-  };
   const [valueD, setValueD] = useState("Choose");
   const [icon, setIcon] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
@@ -19,19 +10,15 @@ export function ExpenseModal() {
     setValueD(valueD);
     setIcon(icon);
     setDropdownVisible(false);
-    console.log(valueD, icon);
   };
   return (
-    <div className="w-[792px] h-content mx-auto relative bottom-[150px]">
+    <div className="w-[792px] h-content mx-auto ">
       <div className="w-[792px] h-[68px] px-6 py-5 bg-white border-b border-slate-200 justify-between items-center inline-flex rounded-[20px_20px_0_0]">
         <div className="text-slate-900 text-xl font-semibold font-sans leading-7 flex items-center justify-between relative">
           <p>Add Category</p>
-
-          <button onClick={ExitButton} className=" absolute left-[720px]">
-            <Closeicon />
-          </button>
         </div>
       </div>
+
       <div className="w-[396px] h-[500px] px-6 pt-5 bg-white flex-col justify-start items-start gap-5 inline-flex rounded-[0_0_0_20px]">
         <div className="self-stretch bg-gray-100 rounded-[100px] justify-start items-start gap-1 inline-flex w-[350px] h-[40px]">
           <div className="grow shrink basis-0  px-3 rounded-[20px] justify-center items-center gap-1 flex w-[175px] h-[40px]">
@@ -96,19 +83,20 @@ export function ExpenseModal() {
                   className="btn m-1 w-[348px] flex items-start flex-col  font-normal opacity-[0.5] "
                 >
                   <div className="flex flex-row-reverse items-center gap-[5px]">
-                    <div className="">{valueD}</div>
+                    <div>{valueD}</div>
                     <div>{icon}</div>
                   </div>
                 </div>
-                <ul
+                <div
                   tabIndex={0}
                   className={`dropdown-content z-[1] menu p-2 bg-base-100 w-[358px] flex rounded-[10px] ${
                     dropdownVisible ? "block" : "hidden"
                   }`}
                 >
-                  {AddCategory.map((e) => {
+                  {AddCategory.map((e, index) => {
                     return (
-                      <a
+                      <div
+                        key={index}
                         className="flex flex-col justify-center items-start text-[#000000]"
                         onClick={() => {
                           handleGetValueD(e.text, e.icon);
@@ -120,10 +108,10 @@ export function ExpenseModal() {
                             {e.text}
                           </p>
                         </div>
-                      </a>
+                      </div>
                     );
                   })}
-                </ul>
+                </div>
               </div>
             </div>
 
@@ -135,9 +123,7 @@ export function ExpenseModal() {
                   </div>
                 </div>
                 <select className="select  w-full max-w-xs bg-[#F9FAFB] border border-gray-300">
-                  <option disabled selected>
-                    Oct 30, 2023
-                  </option>
+                  <option disabled>Oct 30, 2023</option>
                   <option>Han Solo</option>
                   <option>Greedo</option>
                 </select>
@@ -149,16 +135,14 @@ export function ExpenseModal() {
                   </div>
                 </div>
                 <select className="select  w-full max-w-xs bg-[#F9FAFB] border border-gray-300">
-                  <option disabled selected>
-                    4:15 PM
-                  </option>
+                  <option disabled>4:15 PM</option>
                   <option>Han Solo</option>
                   <option>Greedo</option>
                 </select>
               </div>
             </div>
           </div>
-          <div className="">
+          <div>
             <button
               onClick={() => {
                 setSwichColor("blue");
