@@ -31,7 +31,7 @@ export default function AddCategory() {
                 <div className="flex flex-col items-start ">
                   <div className="flex py-6  gap-5 bg-[#fff] ">
                     <div>
-                      <div className="dropdown bg-[#F9FAFB] rounded-lg  border">
+                      <div className="dropdown bg-[#F9FAFB] dropdown-bottom rounded-lg border relative">
                         <button
                           tabIndex={0}
                           className="flex w-[84px] h-[48px] justify-center items-center rounded-lg gap-3"
@@ -39,9 +39,10 @@ export default function AddCategory() {
                           <HouseIcon />
                           <ArrowDropdown />
                         </button>
-                        <ul
+
+                        <div
                           tabIndex={0}
-                          className="dropdown-content z-[10000] menu p-2 shadow bg-base-100 rounded-box w-[312px] h-[288px]"
+                          className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-[312px] h-[288px]"
                         >
                           <a>
                             {" "}
@@ -51,16 +52,14 @@ export default function AddCategory() {
                           <li>
                             <a>Item 2</a>
                           </li>
-                        </ul>
+                        </div>
                       </div>
                     </div>
 
                     <div className="">
                       <label className="form-control w-[350px] h-[48px] max-w-xs ">
                         <select className="select select-bordered bg-[#F9FAFB]">
-                          <option disabled selected>
-                            Name
-                          </option>
+                          <option selected>Name</option>
                           <option>Star Wars</option>
                           <option>Harry Potter</option>
                           <option>Lord of the Rings</option>

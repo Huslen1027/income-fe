@@ -14,7 +14,7 @@ export default function RangeSlider() {
   };
 
   return (
-    <Box sx={{ width: 200 }}>
+    <Box sx={{ width: 190 }}>
       <div className="flex gap-4">
         <div className="w-28 h-12 rounded-lg p-2 border-solid-1 border-[#D1D5DB] bg-[#F3F4F6] items-center inline-flex justify-center">
           <input

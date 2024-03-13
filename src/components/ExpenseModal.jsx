@@ -12,10 +12,15 @@ export function ExpenseModal() {
     setDropdownVisible(false);
   };
   return (
-    <div className="w-[792px] h-content mx-auto ">
+    <div className=" w-[792px] h-[508px] ">
       <div className="w-[792px] h-[68px] px-6 py-5 bg-white border-b border-slate-200 justify-between items-center inline-flex rounded-[20px_20px_0_0]">
         <div className="text-slate-900 text-xl font-semibold font-sans leading-7 flex items-center justify-between relative">
           <p>Add Category</p>
+          <form method="dialog">
+            <button className="btn btn-sm btn-circle btn-ghost absolute left-[715px] bottom-[1px] text-[25px]">
+              ✕
+            </button>
+          </form>
         </div>
       </div>
 
@@ -58,7 +63,7 @@ export function ExpenseModal() {
           <div className="self-stretch h-[300px] flex-col justify-start items-start gap-8 flex">
             <div className="self-stretch h-[76px] px-4 py-3 bg-gray-100 rounded-lg border border-gray-300 flex-col justify-center items-start flex">
               <div className="text-neutral-900 text-base font-normal font-sans leading-normal">
-                Amount
+                <p> Amount</p>
               </div>
               <div className="justify-start items-center gap-2 inline-flex">
                 <input
@@ -71,11 +76,11 @@ export function ExpenseModal() {
             <div className="self-stretch rounded-lg flex-col justify-center items-start flex gap-2">
               <div className="h-[18px] justify-start items-center inline-flex">
                 <div className="text-gray-800 text-base font-normal font-sans leading-normal  ">
-                  Category
+                  <p> Category</p>
                 </div>
               </div>
 
-              <div className="dropdown dropdown-hover   h-12   ">
+              <div className="dropdown dropdown-hover h-12">
                 <div
                   onClick={() => setDropdownVisible(!dropdownVisible)}
                   tabIndex={0}
@@ -115,30 +120,32 @@ export function ExpenseModal() {
               </div>
             </div>
 
-            <div className="self-stretch justify-start items-start gap-3 inline-flex">
+            <div className="self-stretch justify-start items-start gap-10 inline-flex">
               <div className="grow shrink basis-0 rounded-lg flex-col justify-center items-start inline-flex gap-2">
-                <div className="h-[18px] justify-start items-center inline-flex">
-                  <div className="text-gray-800 text-base font-normal font-sans leading-normal">
+                <form className="flex flex-col">
+                  <label htmlFor="transactionDate" className="text-gray-700">
                     Date
-                  </div>
-                </div>
-                <select className="select  w-full max-w-xs bg-[#F9FAFB] border border-gray-300">
-                  <option disabled>Oct 30, 2023</option>
-                  <option>Han Solo</option>
-                  <option>Greedo</option>
-                </select>
+                  </label>
+                  <input
+                    type="date"
+                    id="transactionDate"
+                    name="date"
+                    className="input input-bordered bg-gray-50"
+                  />
+                </form>
               </div>
               <div className="grow shrink basis-0 rounded-lg flex-col justify-center items-start inline-flex gap-2">
-                <div className="h-[18px] justify-start items-center inline-flex">
-                  <div className="text-gray-800 text-base font-normal font-sans leading-normal">
-                    Date
-                  </div>
-                </div>
-                <select className="select  w-full max-w-xs bg-[#F9FAFB] border border-gray-300">
-                  <option disabled>4:15 PM</option>
-                  <option>Han Solo</option>
-                  <option>Greedo</option>
-                </select>
+                <form className="flex flex-col">
+                  <label htmlFor="transactionTime" className="text-gray-700">
+                    Time
+                  </label>
+                  <input
+                    type="time"
+                    id="transactionTime"
+                    name="time"
+                    className="input input-bordered bg-gray-50"
+                  />
+                </form>
               </div>
             </div>
           </div>
@@ -163,7 +170,7 @@ export function ExpenseModal() {
           <div className="self-stretch h-12 rounded-lg flex-col justify-center items-start flex gap-2">
             <div className="h-[18px] justify-start items-center inline-flex">
               <div className="text-gray-800 text-base font-normal font-sans leading-normal">
-                Payee
+                <p> Payee</p>
               </div>
             </div>
             <div className="self-stretch h-12 p-4 bg-gray-50 rounded-lg border border-gray-300 justify-start items-center inline-flex">
@@ -179,7 +186,7 @@ export function ExpenseModal() {
           <div className="self-stretch h-[280px] rounded-lg flex-col justify-center items-start flex gap-2">
             <div className="h-[18px] justify-start items-center inline-flex">
               <div className="text-gray-800 text-base font-normal font-sans leading-normal">
-                Note
+                <p> Payee</p>
               </div>
             </div>
             <div className="self-stretch grow shrink basis-0 p-4 bg-gray-100 rounded-lg border border-gray-300 justify-start items-start inline-flex">

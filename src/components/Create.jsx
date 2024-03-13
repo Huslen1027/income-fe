@@ -14,10 +14,10 @@ export default function Create({ setShowLoad }) {
         </div>
         <div className="flex-col justify-start items-center gap-2 flex">
           <div className="text-slate-900 text-2xl font-semibold   leading-loose">
-            Create Geld account
+            <p> Create Geld account</p>
           </div>
           <div className="text-slate-700 text-base font-normal   leading-normal">
-            Sign up below to create your Wallet account
+            <p> Sign up below to create your Wallet account</p>
           </div>
         </div>
         <div className="flex flex-col gap-5 w-[352px] ">
@@ -52,7 +52,7 @@ export default function Create({ setShowLoad }) {
 
         <div className="justify-start items-baseline inline-flex">
           <div className="text-slate-900 text-base font-normal   leading-normal">
-            Already have account?
+            <p> Already have account?</p>
           </div>
           <Link href="/login">
             <div className="w-[77px] px-3 rounded-[20px] justify-center items-center gap-1 flex">

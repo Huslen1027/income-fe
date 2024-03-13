@@ -1,23 +1,10 @@
 import Vector from "./icons/Vector";
 import Leading from "./icons/Leading";
 import Link from "next/link";
-import { ExpenseModal } from "./ExpenseModal";
-import { useEffect } from "react";
 
 export default function Header() {
-  useEffect(() => {}, []);
   return (
     <div className=" max-w-[1440px] m-auto flex justify-between items-cente  bg-[#fff] px-[120px] py-4 ">
-      <dialog id="my_modal_3" className="modal ">
-        <div className="modal-box w-[1792px] h-[400px]">
-          <ExpenseModal />
-          <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </button>
-          </form>
-        </div>
-      </dialog>
       <div>
         <div className="navbar ">
           <div className="flex-none">
