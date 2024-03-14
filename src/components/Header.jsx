@@ -30,7 +30,7 @@ export default function Header() {
           Record
         </button>
 
-        <div className="navbar w-[10px]">
+        <div className="navbar w-[10px] mr-[70px]">
           <div className="dropdown dropdown-end w-[30px]">
             <div
               tabIndex={0}

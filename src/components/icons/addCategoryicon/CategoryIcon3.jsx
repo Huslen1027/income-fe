@@ -1,4 +1,4 @@
-export default function Badge() {
+export default function CategoryIcon3() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

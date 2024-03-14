@@ -1,4 +1,4 @@
-export default function HouseIcon() {
+export default function CategoryIcon1() {
   return (
     <div>
       <svg

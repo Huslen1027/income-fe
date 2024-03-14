@@ -120,7 +120,7 @@ export function ExpenseModal() {
               </div>
             </div>
 
-            <div className="self-stretch justify-start items-start gap-10 inline-flex">
+            <div className="self-stretch  items-start gap-12 inline-flex justify-between">
               <div className="grow shrink basis-0 rounded-lg flex-col justify-center items-start inline-flex gap-2">
                 <form className="flex flex-col">
                   <label htmlFor="transactionDate" className="text-gray-700">

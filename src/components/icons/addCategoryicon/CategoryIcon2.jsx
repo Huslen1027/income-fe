@@ -1,4 +1,4 @@
-export default function Houseline() {
+export default function CategoryIcon2() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
