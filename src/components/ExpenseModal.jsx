@@ -80,7 +80,7 @@ export function ExpenseModal() {
                 </div>
               </div>
 
-              <div className="dropdown dropdown-hover h-12">
+              <div className="dropdown dropdown-bottom h-12">
                 <div
                   onClick={() => setDropdownVisible(!dropdownVisible)}
                   tabIndex={0}

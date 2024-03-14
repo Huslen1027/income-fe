@@ -80,11 +80,12 @@ export default function Records() {
                   key={index}
                   className="flex justify-between items-center w-[250px] h-[32px]"
                 >
-                  <div className="collapse ">
+                  <div className="collapse b">
                     <input
-                      className="w-[250px] h-[32px]"
+                      className="w-[250px] h-[32px] bg-[black]"
                       type="radio"
                       name="my-accordion-1"
+                      defaultChecked
                     />
                     <div className="collapse-title text-xl font-medium flex justify-between ">
                       <div className="flex items-center gap-2 text-[16px] text-[#1F2937] ">
@@ -94,6 +95,11 @@ export default function Records() {
                       <div>{e.Leadingicon}</div>
                     </div>
                     <div className="collapse-content">
+                      <p>hello</p>
+                      <p>hello</p>
+                      <p>hello</p>
+                      <p>hello</p>
+                      <p>hello</p>
                       <p>hello</p>
                     </div>
                   </div>

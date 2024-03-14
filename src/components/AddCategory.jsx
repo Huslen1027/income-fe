@@ -4,7 +4,7 @@ import ArrowDropdown from "./icons/addCategoryicon/ArrowDropdown";
 import { useState } from "react";
 import CategoryIcon1 from "./icons/addCategoryicon/categoryIcon1";
 export default function AddCategory() {
-  const [icon, seticon] = useState("");
+  const [icon, seticon] = useState("chose");
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const handleGetIcon = (icon) => {
     seticon(icon);
@@ -31,20 +31,28 @@ export default function AddCategory() {
             </form>
           </div>
 
-          <div className="flex flex-col items-start z-[10]">
+          <div className="flex flex-col items-start ">
             <div className="flex py-6  gap-5 bg-[#fff] ">
               <div>
-                <div className="dropdown  bg-[#F9FAFB] dropdown-bottom rounded-lg border ">
-                  <button
-                    onClick={() => setDropdownVisible(dropdownVisible)}
+                <div className="dropdown dropdown-bottom bg-[#F9FAFB]  rounded-lg border relative">
+                  <div
+                    onClick={() => setDropdownVisible(!dropdownVisible)}
                     tabIndex={0}
-                    className="flex w-[84px] h-[48px] justify-center items-center rounded-lg gap-3"
+                    role="button"
+                    className="btn flex w-[84px] h-[48px] justify-center items-center rounded-lg gap-3 bg-[#F9FAFB]"
                   >
-                    <CategoryIcon1 />
-                    <ArrowDropdown />
-                  </button>
-                  <div className="dropdown-content z-[99999999] menu p-2 shadow bg-base-100 rounded-box absolute h-[308px] w-[342px]">
-                    <div className="grid grid-cols-6 gap-4 px-3 py-3 border-b-2">
+                    <div className="flex items-center ">
+                      {icon}
+                      <ArrowDropdown />
+                    </div>
+                  </div>
+                  <div
+                    tabIndex={0}
+                    className={`dropdown-content  menu p-2  bg-base-100 rounded-box h-[288px] w-[342px] ${
+                      dropdownVisible ? "block" : "hidden"
+                    }`}
+                  >
+                    <div className="grid grid-cols-6 gap-4 px-3 py-3 border-b-2 ">
                       {AddCategory2.map((e, index) => {
                         return (
                           <div
