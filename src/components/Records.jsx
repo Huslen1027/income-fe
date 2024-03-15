@@ -94,14 +94,7 @@ export default function Records() {
                       </div>
                       <div>{e.Leadingicon}</div>
                     </div>
-                    <div className="collapse-content">
-                      <p>hello</p>
-                      <p>hello</p>
-                      <p>hello</p>
-                      <p>hello</p>
-                      <p>hello</p>
-                      <p>hello</p>
-                    </div>
+                    <div className="collapse-content"></div>
                   </div>
                 </div>
               );
